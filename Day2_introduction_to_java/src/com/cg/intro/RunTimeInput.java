@@ -9,9 +9,8 @@ public class RunTimeInput {
 		//premitive datatype
 		System.out.println("Enter boolean value");
 		boolean b = scr.nextBoolean();
-		//System.out.println("Enter char value");
-		// char c= scr.nextChar();
-		char c= 'a';
+		System.out.println("Enter char value");
+		 char c= scr.next().charAt(0);
 		System.out.println("Enter byte value");
 		byte by = scr.nextByte();
 		System.out.println("Enter short value");

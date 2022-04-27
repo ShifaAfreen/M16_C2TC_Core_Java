@@ -1,25 +1,23 @@
 package com.cg.multithread2;
-
-class Parent{
-	void print(int num)
+class Parent
+{
+	void  print ( int  num )
 	{
 		synchronized(this)
 		{
-			for(int i=1;i<=num;i++)
+			for(int i=1;i<=5;i++)
 			{
 				System.out.println(num*i);
 			}
 			try {
 				Thread.sleep(400);
-			}
-			catch(InterruptedException e){
+			} catch (InterruptedException e) {
 				System.out.println(e);
 				e.printStackTrace();
 			}
 		}
 	}
 }
-
 class Child extends Thread
 {
 	Parent p;
@@ -29,11 +27,10 @@ class Child extends Thread
 	}
 	public void run()
 	{
-		p.print(20);
+		p.print(10);
 	}
 	
 }
-
 class Child1 extends Thread
 {
 	Parent p1;
@@ -43,17 +40,18 @@ class Child1 extends Thread
 	}
 	public void run()
 	{
-		p1.print(10);
+		p1.print(20);
 	}
 	
 }
-
 public class Example1 {
 
 	public static void main(String[] args) {
-		
-		
-
+		Parent pp=new Parent();
+		Child c1=new Child(pp);
+		Child1 c2=new Child1(pp);
+		c1.start();
+		c2.start();
 	}
 
 }

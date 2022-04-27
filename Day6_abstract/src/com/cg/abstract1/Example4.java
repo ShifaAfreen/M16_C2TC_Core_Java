@@ -1,29 +1,24 @@
 package com.cg.abstract1;
 
-final class Parentk extends Childk
+class Bike
 {
-	 void accept()
+	final void accept()
 	{
-		System.out.print("Parent");
+		System.out.println("Bike");
 	}
-}
+}  
 
-class Childk 
-{
-	void print()
+class Example4 extends Bike
+{  
+	void run()
 	{
-		System.out.print("Child");
-	}
-	
-}
-
-public class Example4 {
-
-	public static void main(String[] args) {
-		Parentk c = new Parentk();
-		c.accept();
-		c.print();
-
-	}
-
-}
+		System.out.println("running safely with 100kmph");
+	}  
+  
+	public static void main(String args[])
+	{  
+		Example4 honda= new Example4();  
+		honda.run();
+		honda.accept();
+	}  
+} 

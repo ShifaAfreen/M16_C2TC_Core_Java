@@ -4,7 +4,8 @@ public abstract class PrimeAcc extends ShopAcc
 {
 	private boolean isPrime;
 	private static final float deliveryCharges=0.0f;
-	public PrimeAcc(int accNO, String accNm, float charges,boolean isPrime) {
+	public PrimeAcc(int accNO, String accNm, float charges,boolean isPrime) 
+	{
 		super(accNO, accNm, charges);
 		this.isPrime=isPrime;
 		
